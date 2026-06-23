@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sameer Akhtar | Software Engineer & Product Strategist Portfolio</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Portfolio of Sameer Akhtar, Computer Science student at MAIT. Software Engineer, HackerRank Campus Lead, and Product Strategist experienced in React Native, React.js, Firebase, and PostgreSQL.">
+    <meta name="keywords" content="Sameer Akhtar, Portfolio, MAIT, Computer Science, Software Engineer, Product Strategy, NestDukanbook, HackerRank, React Native, Supabase, Firebase">
+    <meta name="author" content="Sameer Akhtar">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sameer Akhtar | Portfolio">
+    <meta property="og:description" content="Explore Sameer Akhtar's software development projects, product strategy experience, and academic achievements.">
+    
+    <!-- Google Fonts: Outfit & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- Canvas Background for Hero Section -->
+    <canvas id="hero-canvas"></canvas>
+
+    <!-- Floating Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo-text">Sameer<span class="gradient-text">Akhtar</span></a>
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="btn btn-primary btn-nav" onclick="window.print()">
+                    <i class="fa-solid fa-print"></i> Resume
+                </button>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <div class="glow-accent glow-1"></div>
+            <div class="badge-accent">Available for Opportunities</div>
+            <h1 class="hero-title">
+                Hi, I'm <span class="gradient-text">Sameer Akhtar</span>
+            </h1>
+            <h2 class="hero-subtitle">
+                B.Tech Computer Science @ MAIT | <span id="typing-text"></span><span class="typing-cursor font-normal">|</span>
+            </h2>
+            <p class="hero-description">
+                Building user-centric mobile applications, architecting scalable cloud backends, and steering product strategies. Focused on bridging the gap between rigorous engineering and business impact.
+            </p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">
+                    View My Work <i class="fa-solid fa-arrow-down icon-right"></i>
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    Get In Touch <i class="fa-solid fa-paper-plane icon-right"></i>
+                </a>
+            </div>
+            <div class="hero-socials">
+                <a href="https://github.com/sameerakhtar406" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/sameer-a320n/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:sameerakhtar406@gmail.com" class="social-icon" aria-label="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span class="mouse-wheel"></span>
+        </div>
+    </section>
+
+    <!-- Stats / Highlights Row -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <div class="stat-info">
+                        <span class="stat-value">MAIT CSE '29</span>
+                        <span class="stat-label">Bachelor of Technology</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-star"></i></div>
+                    <div class="stat-info">
+                        <span class="stat-value">5-Star (C++)</span>
+                        <span class="stat-label">HackerRank Rating</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-fire"></i></div>
+                    <div class="stat-info">
+                        <span class="stat-value">325+ Days</span>
+                        <span class="stat-label">German Learning Streak</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-person-running"></i></div>
+                    <div class="stat-info">
+                        <span class="stat-value">10K Runner</span>
+                        <span class="stat-label">Cognizant Marathon</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-text-card glass-card">
+                    <h3>My Journey & Philosophy</h3>
+                    <p>
+                        I am currently pursuing my <strong>Bachelor of Technology in Computer Science & Engineering</strong> at the <em>Maharaja Agrasen Institute of Technology (MAIT)</em>. My passion lies in solving complex algorithmic problems, building responsive software, and examining the intersection of Human-Computer Interaction (HCI) and backend scalability.
+                    </p>
+                    <p>
+                        Beyond standard development, I love engaging in leadership and organizational roles. Whether it's managing tech events globally, designing product strategies for startups, or teaching computational problem-solving, I thrive on collaborative growth.
+                    </p>
+                    <div class="about-badges">
+                        <div class="about-badge"><i class="fa-solid fa-plane-up"></i> NCC 'A' Cert (Air Wing)</div>
+                        <div class="about-badge"><i class="fa-solid fa-trophy"></i> GATE Aspirant (M.Tech IIT)</div>
+                        <div class="about-badge"><i class="fa-solid fa-shield-halved"></i> Defence SSB Screened-In</div>
+                        <div class="about-badge"><i class="fa-solid fa-bicycle"></i> Cyclist & Athlete</div>
+                    </div>
+                </div>
+                <div class="about-education-card glass-card">
+                    <h3>Education</h3>
+                    <div class="education-timeline">
+                        <div class="education-item">
+                            <span class="edu-date">2025 - 2029 (Expected)</span>
+                            <h4 class="edu-school">Maharaja Agrasen Institute of Technology</h4>
+                            <p class="edu-degree">B.Tech in Computer Science and Engineering</p>
+                            <p class="edu-desc">Focusing on Data Structures, Algorithms, Object-Oriented Programming (C++), and Engineering Mathematics.</p>
+                        </div>
+                        <div class="education-item">
+                            <span class="edu-date">2012 - 2025</span>
+                            <h4 class="edu-school">The Air Force School, Subroto Park</h4>
+                            <p class="edu-degree">Senior Secondary (CBSE Class XII)</p>
+                            <p class="edu-desc"><strong>Aggregate: 92%</strong> | Computer Science: 98/100 | Mathematics: 95/100</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Work <span class="gradient-text">Experience</span></h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="timeline-container">
+                <!-- NestDukanbook -->
+                <div class="timeline-item glass-card">
+                    <div class="timeline-badge"><i class="fa-solid fa-chart-line"></i></div>
+                    <div class="timeline-header">
+                        <div>
+                            <span class="timeline-date">Nov 2025 - Present</span>
+                            <h3 class="timeline-role">Product Strategy & Investor Relations</h3>
+                            <h4 class="timeline-company">NestDukanbook <span class="company-tag fintech">FinTech SaaS</span></h4>
+                        </div>
+                        <div class="timeline-value">Rs. 10 Cr Valuation</div>
+                    </div>
+                    <div class="timeline-body">
+                        <p>Contributing directly to the product strategy of a FinTech SaaS platform that digitizes accounting for India's 11 million+ unorganized Kirana stores.</p>
+                        <ul>
+                            <li>Collaborating on product roadmap refinement, converting merchant pain points into design specs.</li>
+                            <li>Assisting in drafting investor pitch decks and communication materials highlighting market reach and SaaS unit economics.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- HackerRank -->
+                <div class="timeline-item glass-card">
+                    <div class="timeline-badge"><i class="fa-solid fa-code"></i></div>
+                    <div class="timeline-header">
+                        <div>
+                            <span class="timeline-date">Jan 2026 - Present</span>
+                            <h3 class="timeline-role">Campus Lead</h3>
+                            <h4 class="timeline-company">HackerRank Campus Crew <span class="company-tag hackerrank">Global Representative</span></h4>
+                        </div>
+                        <div class="timeline-value">Global First</div>
+                    </div>
+                    <div class="timeline-body">
+                        <p>Selected as the first 1st-year student globally to represent HackerRank on campus, driving technical growth and coding excellence.</p>
+                        <ul>
+                            <li>Organized and executed the inaugural MAIT campus algorithmic event in February 2026.</li>
+                            <li>Managed logistics, designed guidelines, and drove active participation from over 200+ students in competitive programming.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- GDG -->
+                <div class="timeline-item glass-card">
+                    <div class="timeline-badge"><i class="fa-brands fa-google"></i></div>
+                    <div class="timeline-header">
+                        <div>
+                            <span class="timeline-date">Sep 2025 - Present</span>
+                            <h3 class="timeline-role">Outreach Team Member</h3>
+                            <h4 class="timeline-company">Google Developer Group (GDG) MAIT <span class="company-tag google">Community Outreach</span></h4>
+                        </div>
+                        <div class="timeline-value">300+ Attendees</div>
+                    </div>
+                    <div class="timeline-body">
+                        <p>Orchestrating technical outreach and community building for GDG MAIT workshops, hackathons, and study groups.</p>
+                        <ul>
+                            <li>Achieved a flagship turnout of 300+ students for the DSA competition and hackathon.</li>
+                            <li>Mentored and guided 100+ recurring community members in open-source setups and git contributions.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 1: Physiotherapy Service Marketplace App -->
+                <div class="project-card glass-card">
+                    <div class="project-media">
+                        <div class="project-visual physiotherapy-visual">
+                            <div class="mock-device">
+                                <div class="mock-screen">
+                                    <div class="skeleton-avatar"></div>
+                                    <div class="skeleton-line-title"></div>
+                                    <div class="skeleton-grid-body">
+                                        <div class="body-part active">Shoulder</div>
+                                        <div class="body-part">Lower Back</div>
+                                        <div class="body-part">Knee</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-tag">React Native | Supabase | PostgreSQL | PostGIS</span>
+                        <h3 class="project-title">Physiotherapy Service Marketplace App</h3>
+                        <p class="project-desc">
+                            An innovative healthcare platform designed to simplify service provider matching and location-based searches for physiotherapy clinics.
+                        </p>
+                        <ul class="project-bullets">
+                            <li><strong>Interactive Pain Map UI:</strong> Developing an interactive skeleton UI that maps specific pain areas, exploring how spatial interaction simplifies complex user inputs.</li>
+                            <li><strong>Supabase Backend Integration:</strong> Backed by PostgreSQL and PostGIS to handle real-time geospatial matches, appointment bookings, and video consultations.</li>
+                            <li><strong>Digital Wallet:</strong> Built a ledger-based secure digital wallet system for session packs.</li>
+                        </ul>
+                        <div class="project-links">
+                            <span class="badge-status"><i class="fa-solid fa-spinner fa-spin"></i> Active Development</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Cure (Healthcare PWA) -->
+                <div class="project-card glass-card">
+                    <div class="project-media">
+                        <div class="project-visual cure-visual">
+                            <div class="mock-dashboard">
+                                <div class="widget aqi-widget">
+                                    <span class="widget-label">Live AQI</span>
+                                    <span class="widget-val val-good">42 (Good)</span>
+                                </div>
+                                <div class="widget calorie-widget">
+                                    <span class="widget-label">Calorie Goal</span>
+                                    <span class="widget-val">1,820 / 2,200 kcal</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-tag">React.js | Firebase | RESTful APIs</span>
+                        <h3 class="project-title">Cure (Healthcare PWA)</h3>
+                        <p class="project-desc">
+                            A Progressive Web App designed to democratize public healthcare access by providing essential health trackers in a single dashboard.
+                        </p>
+                        <ul class="project-bullets">
+                            <li><strong>AQI & Tracker Integrations:</strong> Fetches live external weather APIs to display location-based air quality indices alongside calorie goals.</li>
+                            <li><strong>Forum & Telemedicine:</strong> Designed a scalable database in Firebase for a community support forum; currently working on secure doctor consultation rooms.</li>
+                            <li><strong>Offline Access:</strong> Fully optimized caching and service worker registration for offline usability.</li>
+                        </ul>
+                        <div class="project-links">
+                            <span class="badge-status status-completed"><i class="fa-solid fa-circle-check"></i> Prototype Ready</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dynamic GitHub Repos Section -->
+            <div class="github-repos-container">
+                <div class="github-header">
+                    <i class="fa-brands fa-github github-icon"></i>
+                    <h3>Live GitHub Projects</h3>
+                    <p>Dynamically pulled from my GitHub profile</p>
+                </div>
+                
+                <!-- Loading State -->
+                <div id="github-loading" class="github-loading">
+                    <i class="fa-solid fa-spinner fa-spin"></i>
+                    <p>Fetching repositories...</p>
+                </div>
+
+                <!-- Repositories Grid (Filled by JS) -->
+                <div id="github-repos-grid" class="github-repos-grid"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="skills-grid-container">
+                <!-- Languages Card -->
+                <div class="skills-card glass-card">
+                    <div class="skills-card-icon"><i class="fa-solid fa-terminal"></i></div>
+                    <h3>Languages</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">C/C++ <span class="skill-p">Advanced</span></div>
+                        <div class="skill-item">Python <span class="skill-p">Intermediate</span></div>
+                        <div class="skill-item">JavaScript <span class="skill-p">Advanced</span></div>
+                        <div class="skill-item">TypeScript <span class="skill-p">Advanced</span></div>
+                        <div class="skill-item">HTML5 & CSS3 <span class="skill-p">Expert</span></div>
+                        <div class="skill-item">SQL <span class="skill-p">Intermediate</span></div>
+                    </div>
+                </div>
+
+                <!-- Technologies & Frameworks Card -->
+                <div class="skills-card glass-card">
+                    <div class="skills-card-icon"><i class="fa-solid fa-layer-group"></i></div>
+                    <h3>Frameworks & Cloud</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">React Native</div>
+                        <div class="skill-item">React.js</div>
+                        <div class="skill-item">Firebase</div>
+                        <div class="skill-item">Supabase (PostgreSQL)</div>
+                        <div class="skill-item">PostGIS</div>
+                        <div class="skill-item">RESTful APIs</div>
+                        <div class="skill-item">Node.js / Express</div>
+                        <div class="skill-item">Git / GitHub</div>
+                    </div>
+                </div>
+
+                <!-- Core Competencies Card -->
+                <div class="skills-card glass-card">
+                    <div class="skills-card-icon"><i class="fa-solid fa-brain"></i></div>
+                    <h3>Core Competencies</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">Data Structures</div>
+                        <div class="skill-item">Algorithmic Design</div>
+                        <div class="skill-item">Human-Computer Interaction</div>
+                        <div class="skill-item">Product Strategy</div>
+                        <div class="skill-item">Public Relations & Outreach</div>
+                        <div class="skill-item">Technical Writing</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certifications Section -->
+            <div class="certifications-container">
+                <h3>Certifications & Badges</h3>
+                <div class="certs-grid">
+                    <div class="cert-item glass-card">
+                        <div class="cert-icon"><i class="fa-solid fa-microchip"></i></div>
+                        <div>
+                            <h4>OCI Certified AI Associate</h4>
+                            <p>Oracle Cloud Infrastructure</p>
+                        </div>
+                    </div>
+                    <div class="cert-item glass-card">
+                        <div class="cert-icon"><i class="fa-brands fa-google"></i></div>
+                        <div>
+                            <h4>Google Cloud Compute Skill Badge</h4>
+                            <p>Google Cloud Platform</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="contact-grid">
+                <!-- Info Cards -->
+                <div class="contact-info">
+                    <div class="info-card glass-card">
+                        <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div>
+                            <h4>Email Me</h4>
+                            <a href="mailto:sameerakhtar406@gmail.com" class="info-link">sameerakhtar406@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="info-card glass-card">
+                        <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div>
+                            <h4>Call Me</h4>
+                            <a href="tel:+919999755276" class="info-link">+91 9999755276</a>
+                        </div>
+                    </div>
+                    <div class="info-card glass-card">
+                        <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <h4>Location</h4>
+                            <p class="info-text">Delhi, India</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-container glass-card">
+                    <form id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="form-name">Your Name</label>
+                                <input type="text" id="form-name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-email">Your Email</label>
+                                <input type="email" id="form-email" placeholder="john@example.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-subject">Subject</label>
+                            <input type="text" id="form-subject" placeholder="Project Inquiry / Opportunity" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-message">Message</label>
+                            <textarea id="form-message" rows="5" placeholder="Hi Sameer, I'd like to collaborate..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            Send Message <i class="fa-solid fa-paper-plane icon-right"></i>
+                        </button>
+                        <div id="form-status" class="form-status"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Sameer Akhtar. Built with vanilla CSS & JS. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="https://github.com/sameerakhtar406" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
+                    <a href="https://www.linkedin.com/in/sameer-a320n/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="index.js"></script>
+</body>
+</html>
